@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <title>Chat room</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link rel="stylesheet" th:href="@{/bootstrap/fontawesome.css}">
+    <link rel="stylesheet" th:href="@{/bootstrap/style.css}">
+    <script th:src="@{/bootstrap/script1.js}"></script>
+    <script th:src="@{/bootstrap/script2.js}"></script>
+    <script th:src="@{/bootstrap/script3.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/sockjs.js}"></script>
+    <script th:src="@{/js/stomp.js}"></script>
 </head>
 <body>
-
+<form id="message-form">
+    <input type="text" id="sender" placeholder="Sender name">
+    <input type="text" id="content" placeholder="Type message ...">
+    <button class="btn btn-danger" type="submit">Send</button>
+</form>
+<div id="show-message"></div>
+<!-----------------------script----------------------->
+<script th:src="@{/js/main.js}"></script>
 </body>
 </html>
